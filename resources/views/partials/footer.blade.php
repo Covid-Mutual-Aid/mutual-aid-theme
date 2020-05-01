@@ -6,7 +6,7 @@
       ]) !!}
     @endif
   </div>
-  <div>
+  <div class="container">
     <h5>Disclaimer</h5>
     <div>
       <p>Covid-19 Mutual Aid UK is a support network for people organising in their communities. Local support groups are not directly affiliated with Covid-19 Mutual Aid UK and we are not accountable for their activities.</p>

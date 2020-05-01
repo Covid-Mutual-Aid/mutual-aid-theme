@@ -3,7 +3,6 @@
 @section('content')
   @while(have_posts()) @php the_post() @endphp
     @include('partials.page-header')
-    @include('partials.group-search')
     @if (has_nav_menu('hero_navigation'))
        {!! wp_nav_menu([
         'theme_location' => 'hero_navigation',
