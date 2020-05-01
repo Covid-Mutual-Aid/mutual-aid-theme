@@ -6,7 +6,8 @@
     @if (has_nav_menu('hero_navigation'))
        {!! wp_nav_menu([
         'theme_location' => 'hero_navigation',
-        'walker' => new wp_bootstrap_navwalker()
+        'walker' => new wp_bootstrap_navwalker(),
+        'container_class' => 'container'
       ]) !!}
     @endif
     @include('partials.content-front-page')
