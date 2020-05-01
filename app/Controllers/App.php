@@ -30,4 +30,8 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public static function tagline() {
+        return get_bloginfo( 'description', 'display' );
+    }
 }
