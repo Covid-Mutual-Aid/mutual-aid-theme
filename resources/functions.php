@@ -58,7 +58,7 @@ array_map(function ($file) use ($sage_error) {
     if (!locate_template($file, true, true)) {
         $sage_error(sprintf(__('Error locating <code>%s</code> for inclusion.', 'sage'), $file), 'File not found');
     }
-}, ['helpers', 'setup', 'filters', 'admin']);
+}, ['helpers', 'setup', 'filters', 'admin', 'navwalker']);
 
 /**
  * Here's what's happening with these hooks:
@@ -90,3 +90,16 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+/**
+ * Mutual Aid Theme
+ */
+function wpb_hero_navigation() {
+    register_nav_menu('hero_navigation',__( 'Hero Navigation' ));
+}
+add_action( 'init', 'wpb_hero_navigation' );
+
+function wpb_footer_navigation() {
+    register_nav_menu('footer_navigation',__( 'Footer Navigation' ));
+}
+add_action( 'init', 'wpb_footer_navigation' );
