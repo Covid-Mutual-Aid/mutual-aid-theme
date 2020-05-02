@@ -198,6 +198,8 @@ module.exports = {
   */
 
   fonts: {
+    'poppins': ['Poppins', 'sans-serif'],
+    'muli': ['Muli', 'sans-serif'],
     'sans': [
       'system-ui',
       'BlinkMacSystemFont',
