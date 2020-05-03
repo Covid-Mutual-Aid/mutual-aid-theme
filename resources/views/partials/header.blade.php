@@ -1,6 +1,6 @@
-<header class="banner">
+<header class="banner subpixel-antialiased">
   <div class="container">
-    <nav class="nav-primary flex items-center justify-between flex-wrap p-6">
+    <nav class="nav-primary flex items-center justify-between flex-wrap py-4">
       <div class="flex items-center flex-shrink-0 text-white mr-6">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 99" width="220" height="44">
           <path d="M0 0h500v99H0V43l3 10 20 31 8 10c2 2 5 1 7-1l24-36c6-10 7-22 2-33-2-6-6-11-11-15-7-4-15-6-22-6A35 35 0 000 35V0z" fill="#fff"/>
@@ -25,7 +25,7 @@
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu([
           'theme_location' => 'primary_navigation',
-          'container_class' => 'w-full block flex-grow lg:flex lg:items-center lg:w-auto',
+          'container_class' => 'w-full font-muli font-semibold block flex-grow lg:flex lg:items-center lg:w-auto',
           'menu_class' => 'nav text-sm lg:flex-grow'
         ]) !!}
       @endif
