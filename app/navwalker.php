@@ -133,6 +133,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			 */
 			$args = apply_filters( 'nav_menu_item_args', $args, $item, $depth );
 
+			if ($args->item_class) {
+				$item_class = $args->item_class;
+			}
+
 			// Add .dropdown or .active classes where they are needed.
 			if ( isset( $args->has_children ) && $args->has_children ) {
 				$classes[] = 'dropdown';
@@ -144,6 +148,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			// Add some additional default classes to the item.
 			$classes[] = 'menu-item-' . $item->ID;
 			$classes[] = 'nav-item';
+
+			// List item class passed from wp_nav_menu() arguments
+			if ( $item_class ) {
+				$classes[] = $item_class; }
 
 			// Allow filtering the classes.
 			$classes = apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth );
