@@ -8,10 +8,11 @@
         'theme_location' => 'hero_navigation',
         'walker' => new wp_bootstrap_navwalker(),
         'container_class' => 'container',
-        'before' => '',
-        'after' => '',
-        'menu_class' => 'hero_navigation -mt-20 flex justify-between font-poppins font-semibold text-black border-0 p-0 pb-40',
-        'item_class' => 'border-blue w-6/25 border pt-5 pr-5 pb-5 pl-5 text-xl bg-green'
+        'menu_class' => 'hero_navigation -mt-20 flex justify-between font-poppins text-black border-0 p-0 pb-40',
+        'item_class' => 'border-blue w-6/25 border pt-5 pr-5 pb-5 pl-5 text-xl bg-green',
+        'link_before' => '<div class="font-semibold">',
+        'link_after' => '</div>',
+        'description_class' => 'description',
       ]) !!}
     @endif
     @include('partials.content-front-page')
