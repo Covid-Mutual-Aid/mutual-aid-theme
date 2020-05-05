@@ -93,10 +93,14 @@
     @apply font-poppins;
   }
 
+  h2 {
+    @apply text-3xl text-center mb-16;
+  }
+
   p,
   ul,
   ol {
-    @apply font-muli;
+    @apply font-muli leading-relaxed text-lg;
   }
 }
 
